@@ -5,19 +5,58 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
-
 # Build settings
-markdown: kramdown
-highlighter: pygments
+permalink   : /blog/:year/:title/
+markdown    : kramdown
+highlighter : Pygments
 encoding: utf-8
+
+paginate: 3
+paginate_path: "/blog/page/:num/"
+comments: true
+
+destination: _site
+sass:
+  sass_dir: _scss
+  style: compressed # expanded
+
+# SEO settings
+title: Thaleb's Projects
+description: "A page for my hobby software"
+# keywords: ""
+# url: http://nandomoreira.me
+# baseurl: "/end2end"
+# baseurl: ""
+
+# google_analytics: UA-52446115-1
+# repo: http://github.com/nandomoreirame/end2end
+# disqus_shortname: "fernandomoreira"
+# disqus_site_shortname: "fernandomoreira"
+
+# Author settings
+author:
+  name      : Karim Tsouli
+  job       : Software Engineer
+  bio       : "Love to work with old consoles and modernize or mod them."
+  thumb     : /images/author.jpg
+  email     : karim.tsouli@gmail.com
+  #url       : http://nandomoreira.me
+  #github    : http://github.com/nandomoreirame
+  #twitter   : http://twitter.com/nandomoreirame
+  #facebook  : http://facebook.com/fernando.dev
+  #linkedin  : http://linkedin.com/in/nandomoreirame
+
+gems: [jekyll-paginate]
+
+# navbar pages
+navbar:
+  - slug: about
+    title: About
+  # - slug: resume
+  #   title: Resume
+  # - slug: skills
+  #   title: Skills
+  - slug: blog
+    title: Blog
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
