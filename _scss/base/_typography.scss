@@ -62,7 +62,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: shade($action-color, 25%);
+    color: #53258c;
   }
 }
 
@@ -88,7 +88,7 @@ code {
   font-size: 0.9em;
   margin: 0;
   padding: 0 5px;
-  background-color: lighten($light-gray-color, 6%);
+  background-color: $black-color;
 }
 
 pre {
